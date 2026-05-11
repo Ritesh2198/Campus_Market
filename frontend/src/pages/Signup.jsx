@@ -24,7 +24,7 @@ const Signup = () => {
           return;
         }
         try {
-            const res = await axios.post("https://market-backend-6.onrender.com/api/v1/auth/signup", userData);
+            const res = await axios.post("https://campus-market-b0vp.onrender.com/api/v1/auth/signup", userData);
             
             toast.success("Signup successful! Please login.");
             navigate("/login");

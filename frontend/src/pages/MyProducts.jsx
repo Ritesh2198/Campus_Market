@@ -14,7 +14,7 @@ const MyProducts = () => {
     useEffect(() => {
         const fetchProducts = async() => {
             try {
-                const res =await axios.post("https://market-backend-6.onrender.com/api/v1/product/myProducts", {userId});
+                const res =await axios.post("https://campus-market-b0vp.onrender.com/api/v1/product/myProducts", {userId});
                 setProducts(res.data.products);
             } catch (error) {
                 console.error("Error fetching products:", error);
@@ -29,7 +29,7 @@ const MyProducts = () => {
         
         
         try {
-            await axios.post(`https://market-backend-6.onrender.com/api/v1/product/deleteProduct`,{productId});
+            await axios.post(`https://campus-market-b0vp.onrender.com/api/v1/product/deleteProduct`,{productId});
             setProducts(products.filter(product => product._id !== productId));
         } catch (error) {
             console.error("Error deleting product:", error);

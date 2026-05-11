@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [selectedImage, setSelectedImage] = useState("");
     const getProductDetail = async()=>{
                 try{
-                    const res = await axios.post("https://market-backend-6.onrender.com/api/v1/product/getProduct", { id });
+                    const res = await axios.post("https://campus-market-b0vp.onrender.com/api/v1/product/getProduct", { id });
                 if(res.data.success){
                     setProduct(res.data.product);
                     if (res.data.product.images.length > 0) {

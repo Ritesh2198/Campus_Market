@@ -21,7 +21,7 @@ const EditProduct = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const res = await axios.post(`https://market-backend-6.onrender.com/api/v1/product/getProduct`,{id});
+                const res = await axios.post(`https://campus-market-b0vp.onrender.com/api/v1/product/getProduct`,{id});
                 setProduct(res.data.product);
                 setLoading(false);
             } catch (err) {
@@ -42,7 +42,7 @@ const EditProduct = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:3000/api/v1/product/update/${id}`, product);
+            await axios.put(`https://campus-market-b0vp.onrender.com/api/v1/product/update/${id}`, product);
             toast.success("Product updated successfully!");
             navigate("/my-products"); 
         } catch (err) {

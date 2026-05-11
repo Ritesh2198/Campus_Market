@@ -11,7 +11,7 @@ const CategoryProducts = () => {
 
     const fetchProducts = async()=>{
             try{
-                const res = await axios.get(`https://market-backend-6.onrender.com/api/v1/product/category/${category}`);
+                const res = await axios.get(`https://campus-market-b0vp.onrender.com/api/v1/product/category/${category}`);
     
                 if(res.data.success){
                     setAllProducts(res.data.data);

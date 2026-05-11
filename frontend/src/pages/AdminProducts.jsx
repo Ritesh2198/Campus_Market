@@ -10,7 +10,7 @@ const AdminProducts = () => {
     useEffect(() => {
         const fetchPendingProducts = async () => {
             try {
-                const res = await axios.get("https://market-backend-6.onrender.com/api/v1/product/getPendingProducts");
+                const res = await axios.get("https://campus-market-b0vp.onrender.com/api/v1/product/getPendingProducts");
                 setProducts(res.data.products);
             } catch (error) {
                 console.error("Error fetching pending products:", error);
@@ -23,7 +23,7 @@ const AdminProducts = () => {
 
     const handleApprove = async (productId) => {
         try {
-            await axios.post("https://market-backend-6.onrender.com/api/v1/product/approveProduct",{productId},{headers:{Authorization : `Bearer ${token}`}});
+            await axios.post("https://campus-market-b0vp.onrender.com/api/v1/product/approveProduct",{productId},{headers:{Authorization : `Bearer ${token}`}});
             setProducts(products.filter(product => product._id !== productId));
         } catch (error) {
             console.error("Error approving product:", error);
@@ -32,7 +32,7 @@ const AdminProducts = () => {
 
     const handleReject = async (productId) => {
         try {
-            await axios.post("https://market-backend-6.onrender.com/api/v1/product/rejectProduct",{productId},{headers:{Authorization : `Bearer ${token}`}});
+            await axios.post("https://campus-market-b0vp.onrender.com/api/v1/product/rejectProduct",{productId},{headers:{Authorization : `Bearer ${token}`}});
             setProducts(products.filter(product => product._id !== productId));
         } catch (error) {
             console.error("Error rejecting product:", error);
